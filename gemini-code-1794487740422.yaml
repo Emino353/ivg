@@ -1,0 +1,40 @@
+name: IVG Preis-Tracker
+
+on:
+  schedule:
+    - cron: '*/15 * * * *' # Alle 15 Minuten (läuft in der Cloud ohne deinen PC)
+  workflow_dispatch:       # Ermöglicht manuelles Starten zum Testen
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository laden
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Playwright installieren
+        run: |
+          pip install playwright
+          playwright install chromium
+
+      - name: Preis abfragen
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python tracker.py
+
+      - name: Ergebnis in CSV speichern
+        run: |
+          git config user.name "Preis-Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add preise.csv
+          git commit -m "Preis-Update $(date +'%Y-%m-%d %H:%M')" || exit 0
+          git push
