@@ -7,7 +7,7 @@ import urllib.request
 import urllib.parse
 from playwright.sync_api import sync_playwright
 
-URL = "https://ivg.auction/de/auktionsobjekt/akku-tauchkreissaege-makita-dsp600/a2f6b990-2690-4117-852e-d21bd0fbbcb9"
+URL = "https://ivg.auction/de/auktionsobjekt/laufrad-scool-acedemy-grade-1/a328acc7-7148-4687-b94b-9e850cec418c"
 CSV_FILE = "preise.csv"
 
 def send_telegram(message: str):
