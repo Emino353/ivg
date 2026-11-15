@@ -1,12 +1,19 @@
 name: IVG Preis-Tracker
 
 on:
+  push:
+    paths:
+      - 'auktionen.txt'    # Neue Links beim Speichern sofort einmal einlesen
   schedule:
-    - cron: '*/15 * * * *' # Alle 15 Minuten (läuft in der Cloud ohne deinen PC)
-  workflow_dispatch:       # Ermöglicht manuelles Starten zum Testen
+    - cron: '*/5 * * * *'  # Taktgeber für 12:00 Uhr & die letzten 30 Min. vor Ende
+  workflow_dispatch:       # Manueller Start zum Testen
 
 permissions:
   contents: write
+
+concurrency:
+  group: ivg-tracker
+  cancel-in-progress: false
 
 jobs:
   track:
@@ -20,21 +27,28 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Zeitplan prüfen
+        id: check
+        run: python tracker.py --check
+
       - name: Playwright installieren
+        if: steps.check.outputs.run_browser == 'true'
         run: |
           pip install playwright
-          playwright install chromium
+          playwright install --with-deps chromium
 
-      - name: Preis abfragen
+      - name: Fällige Auktionen abfragen
+        if: steps.check.outputs.run_browser == 'true'
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python tracker.py
 
-      - name: Ergebnis in CSV speichern
+      - name: Ergebnisse speichern
+        if: steps.check.outputs.run_browser == 'true'
         run: |
           git config user.name "Preis-Bot"
           git config user.email "bot@users.noreply.github.com"
-          git add preise.csv
+          git add preise.csv status.json
           git commit -m "Preis-Update $(date +'%Y-%m-%d %H:%M')" || exit 0
           git push
