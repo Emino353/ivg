@@ -1,46 +1,46 @@
 {
-  "last_daily_date": "2026-11-18",
+  "last_daily_date": "2026-11-19",
   "auctions": {
     "https://ivg.auction/de/auktionsobjekt/hobelbank/a2e8cead-e35d-477e-b490-58b0b511e951": {
       "title": "Hobelbank",
       "end_time": "2026-11-24T14:31:00+01:00",
       "last_price": "45,00 €",
-      "last_checked": "2026-11-18T12:28:36.122036+01:00",
+      "last_checked": "2026-11-19T12:27:25.065546+01:00",
       "finished": false
     },
     "https://ivg.auction/de/auktionsobjekt/hobelbank/a2e8ceae-0e47-4347-baa2-9f0adf9d4f72": {
       "title": "Hobelbank",
       "end_time": "2026-11-24T14:32:00+01:00",
       "last_price": "47,00 €",
-      "last_checked": "2026-11-18T12:28:36.122036+01:00",
+      "last_checked": "2026-11-19T12:27:25.065546+01:00",
       "finished": false
     },
     "https://ivg.auction/de/auktionsobjekt/rennrad-canyon-aeroad-cf-slx-8-di2/a333629a-50b7-4b2f-a94c-e8c9e7b2266a": {
       "title": "Rennrad CANYON Aeroad CF SLX 8 Di2",
       "end_time": "2026-12-08T14:04:00+01:00",
-      "last_price": "400,00 €",
-      "last_checked": "2026-11-18T12:28:36.122036+01:00",
+      "last_price": "410,00 €",
+      "last_checked": "2026-11-19T12:27:25.065546+01:00",
       "finished": false
     },
     "https://ivg.auction/de/auktionsobjekt/rennrad-pinarello-f7-ultegra-di2-ultrafast/a333629a-75fc-4a3d-8b46-5122b24475cc": {
       "title": "Rennrad PINARELLO F7 Ultegra Di2 Ultrafast",
       "end_time": "2026-12-08T14:06:00+01:00",
       "last_price": "410,00 €",
-      "last_checked": "2026-11-18T12:28:36.122036+01:00",
+      "last_checked": "2026-11-19T12:27:25.065546+01:00",
       "finished": false
     },
     "https://ivg.auction/de/auktionsobjekt/rennrad-canyon-aeroad-cf-slx-7-di2-c46/a333629c-7f55-41b8-8cad-b33c193fa414": {
       "title": "Rennrad CANYON Aeroad CF SLX 7 Di2 C46",
       "end_time": "2026-12-08T14:50:00+01:00",
-      "last_price": "460,00 €",
-      "last_checked": "2026-11-18T12:28:36.122036+01:00",
+      "last_price": "480,00 €",
+      "last_checked": "2026-11-19T12:27:25.065546+01:00",
       "finished": false
     },
     "https://ivg.auction/de/auktionsobjekt/fahrrad-fully-cannondale-scalpel-2-2025/a333629c-a1f3-4060-a8db-39ae3d530f37": {
       "title": "Fahrrad Fully CANNONDALE Scalpel 2 2025",
       "end_time": "2026-12-08T14:52:00+01:00",
       "last_price": "150,00 €",
-      "last_checked": "2026-11-18T12:28:36.122036+01:00",
+      "last_checked": "2026-11-19T12:27:25.065546+01:00",
       "finished": false
     }
   }
