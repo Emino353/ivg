@@ -3,17 +3,17 @@
   "auctions": {
     "https://ivg.auction/de/auktionsobjekt/hobelbank/a2e8cead-e35d-477e-b490-58b0b511e951": {
       "title": "Hobelbank",
-      "end_time": "2026-11-24T14:31:00+01:00",
-      "last_price": "45,00 €",
-      "last_checked": "2026-11-24T12:31:06.686250+01:00",
-      "finished": false
+      "end_time": "2026-11-24T14:33:00+01:00",
+      "last_price": "Kein Preis sichtbar (beendet?)",
+      "last_checked": "2026-11-24T14:46:27.949752+01:00",
+      "finished": true
     },
     "https://ivg.auction/de/auktionsobjekt/hobelbank/a2e8ceae-0e47-4347-baa2-9f0adf9d4f72": {
       "title": "Hobelbank",
-      "end_time": "2026-11-24T14:32:00+01:00",
-      "last_price": "49,00 €",
-      "last_checked": "2026-11-24T12:31:06.686250+01:00",
-      "finished": false
+      "end_time": "2026-11-24T14:44:00+01:00",
+      "last_price": "Kein Preis sichtbar (beendet?)",
+      "last_checked": "2026-11-24T14:46:27.949752+01:00",
+      "finished": true
     },
     "https://ivg.auction/de/auktionsobjekt/rennrad-canyon-aeroad-cf-slx-8-di2/a333629a-50b7-4b2f-a94c-e8c9e7b2266a": {
       "title": "Rennrad CANYON Aeroad CF SLX 8 Di2",
